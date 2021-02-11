@@ -23,6 +23,8 @@ Route::prefix('auth')->group(function() {
     Route::post('register', 'AuthController@register');
 });*/
 
+Route::post('convert_csv_to_array', 'StudentController@importCSVFile');
+
 Route::group([
     'prefix' => 'auth'
 ], function () {
