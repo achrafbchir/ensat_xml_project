@@ -1,0 +1,7 @@
+<!ELEMENT profs (prof*)>
+<!ELEMENT prof (FirstName, LastName, Dept_Attachement, Phone, Email)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT Dept_Attachement (#PCDATA)>
+<!ELEMENT Phone (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>

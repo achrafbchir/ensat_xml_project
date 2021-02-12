@@ -1,0 +1,9 @@
+<!ELEMENT notes (note*)>
+<!ELEMENT note (FirstName, LastName, ClassName, ModuleName, ElementName, Note)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT ClassName (#PCDATA)>
+<!ELEMENT ModuleName (#PCDATA)>
+<!ELEMENT ElementName (#PCDATA)>
+<!ELEMENT Note (#PCDATA)>
+

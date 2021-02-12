@@ -1,0 +1,6 @@
+<!ELEMENT modules (module*)>
+<!ELEMENT module (ModuleName, Elements+, Dept_Attachement)>
+<!ELEMENT ModuleName (#PCDATA)>
+<!ELEMENT Elements (Element)>
+<!ELEMENT Element (#PCDATA)>
+<!ELEMENT Dept_Attachement (#PCDATA)>

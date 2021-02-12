@@ -24,6 +24,8 @@ Route::prefix('auth')->group(function() {
 });*/
 
 Route::post('convert_csv_to_array', 'StudentController@importCSVFile');
+Route::post('is_valid_dtd', 'StudentController@isValidDTD');
+Route::post('is_valid_xsd', 'StudentController@isValidXSD');
 
 Route::group([
     'prefix' => 'auth'

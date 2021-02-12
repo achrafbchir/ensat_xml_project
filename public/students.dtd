@@ -1,0 +1,9 @@
+<!ELEMENT students (student*)>
+<!ELEMENT student (CNE, DateOfBirth, FirstName, LastName, ClassName, Phone, Email)>
+<!ELEMENT CNE (#PCDATA)>
+<!ELEMENT DateOfBirth (#PCDATA)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT ClassName (#PCDATA)>
+<!ELEMENT Phone (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
