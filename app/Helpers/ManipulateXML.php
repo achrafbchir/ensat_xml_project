@@ -28,8 +28,6 @@ class ManipulateXML {
             $row++;
         }
 
-        //return $converted_csv_to_array;
-
         #create xml string
         $xml_string = new SimpleXMLElement(self::arrayToXml($converted_csv_to_array,"<$plural/>", null, $single));
 
@@ -71,24 +69,15 @@ class ManipulateXML {
 
     public static function isValidDTD($file)
     {
-        //dd(File::files(public_path()));
-        //return Storage::get('students.xml');
-
         $xml_file = new DOMDocument;
         $xml_file->resolveExternals = true;
-        //dd(fopen($file->path(), "r"));
-        //dd($file->path());
-        //dd($file->path());
 
-        //dd(fopen('D:\developpement\ensat_xml_project\public\students.xml', "r"));
         $xml_file->load($file->path() );
-        //dd($xml_file->saveXML()); 
-        //dd($xml_file->getElementsByTagName('student'));
         if($xml_file->validate())
         {
-            return 100;
+            return true;
         }
-        return 2;
+        return false;
     }
 
     public static function libxml_display_error($error)
@@ -130,17 +119,15 @@ class ManipulateXML {
         $xml_file = new DOMDocument;
         $xml_file->resolveExternals = true;
 
-        //dd(fopen('D:\developpement\ensat_xml_project\public\students.xml', "r"));
         $xml_file->load($file->path() );
-        //dd($xml_file->saveXML()); 
-        //dd($xml_file->getElementsByTagName('student'));
         if (!$xml_file->schemaValidate('students.xsd')) {
+            return false;
             print '<b>DOMDocument::schemaValidate() Generated Errors!</b>';
             self::libxml_display_errors();
         }
         else
         {
-            return 150;
+            return true;
         }
     }
 }
