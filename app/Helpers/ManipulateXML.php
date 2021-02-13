@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\File;
 
 class ManipulateXML {
 
-    public static function convertExcelToXML(UploadedFile $file, $plural, $single)
+    public static function convertExcelToXML(UploadedFile $file, $plural, $single, $class_name, $xml_file_name)
     {
         #convert excel table to array
         //$csv_array = fgetcsv($file);
@@ -29,10 +29,11 @@ class ManipulateXML {
         }
 
         #create xml string
-        $xml_string = new SimpleXMLElement(self::arrayToXml($converted_csv_to_array,"<$plural/>", null, $single));
+        $xml_string = new SimpleXMLElement(self::arrayToXml($converted_csv_to_array, "<!DOCTYPE $plural SYSTEM '$plural.dtd'> <$plural/>", null, $single));
 
         #save xml file
-        return $xml_string->asXML("$plural.xml");
+        
+        return $xml_string->asXML($class_name."_".$xml_file_name.".xml");
 
     }
 

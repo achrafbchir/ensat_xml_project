@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE students SYSTEM "students.dtd">
+<students><student><CNE>1311071101</CNE><DateOfBirth>31/03/1995</DateOfBirth><FirstName>Achraf</FirstName><LastName>Bchir</LastName><ClassName>GINF3</ClassName><Phone>638373745</Phone><Email>achraf.achraf.ba@gmail.com</Email></student><student><CNE>1502397848</CNE><DateOfBirth>02/03/1999</DateOfBirth><FirstName>Salma</FirstName><LastName>El Aakkouchi</LastName><ClassName>GINF2</ClassName><Phone>638373746</Phone><Email>salma.elaakkouchi@gmail.com</Email></student></students>
