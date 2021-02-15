@@ -7,20 +7,10 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="ModuleName" type="xs:string"/>
+                            <xs:element name="ElementName1" type="xs:string"/>
+                            <xs:element name="ElementName2" type="xs:string"/>
+                            <xs:element name="ElementName3" type="xs:string"/>
                             <xs:element name="Dept_Attachement" type="xs:string"/>
-                            <xs:element name="Elements">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="Element" maxOccurs="unbounded">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="ModuleName" type="xs:string"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
