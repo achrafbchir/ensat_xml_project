@@ -1,6 +1,7 @@
 <!ELEMENT modules (module*)>
-<!ELEMENT module (ModuleName, Elements+, Dept_Attachement)>
+<!ELEMENT module (ModuleName, ElementName1, ElementName2, ElementName3, Dept_Attachement)>
 <!ELEMENT ModuleName (#PCDATA)>
-<!ELEMENT Elements (Element)>
-<!ELEMENT Element (#PCDATA)>
+<!ELEMENT ElementName1 (#PCDATA)>
+<!ELEMENT ElementName2 (#PCDATA)>
+<!ELEMENT ElementName3 (#PCDATA)>
 <!ELEMENT Dept_Attachement (#PCDATA)>

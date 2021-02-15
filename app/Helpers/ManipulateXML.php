@@ -115,13 +115,13 @@ class ManipulateXML {
     // Enable user error handling
     //libxml_use_internal_errors(true);
 
-    public static function isValidXSD($file)
+    public static function isValidXSD($file, $xsd_file_name)
     {
         $xml_file = new DOMDocument;
         $xml_file->resolveExternals = true;
 
         $xml_file->load($file->path() );
-        if (!$xml_file->schemaValidate('students.xsd')) {
+        if (!$xml_file->schemaValidate("$xsd_file_name.xsd")) {
             return false;
             print '<b>DOMDocument::schemaValidate() Generated Errors!</b>';
             self::libxml_display_errors();

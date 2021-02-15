@@ -72,6 +72,7 @@ class StudentController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'xml_file' => 'required|file',
+            'xsd_file_name' => 'required|in:'.implode(',',xml_files)
         ]);
 
         if ($validator->fails()) {
@@ -85,8 +86,9 @@ class StudentController extends Controller
         }
 
         $file = $request->file("xml_file");
+        $xsd_file_name = $request->xsd_file_name;
 
-        return ManipulateXML::isValidXSD($file);
+        return ManipulateXML::isValidXSD($file, $xsd_file_name);
 
     }
 }
